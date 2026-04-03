@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Attendance Tracker</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1F2937; background: #F9FAFB; line-height: 1.7;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        header {
+            background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0;
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.25rem; color: #2563EB; }
+        nav a { color: #6B7280; text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+        nav a:hover { color: #2563EB; }
+        main { padding: 48px 0 80px; }
+        h2 { font-size: 2rem; margin-bottom: 24px; }
+        h3 { font-size: 1.2rem; margin: 32px 0 12px; color: #1F2937; }
+        p { color: #374151; margin-bottom: 12px; }
+        .faq { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+        .faq h4 { font-size: 1rem; margin-bottom: 8px; color: #2563EB; }
+        .faq p { margin-bottom: 0; }
+        .contact-card {
+            background: #DBEAFE; border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center;
+        }
+        .contact-card h3 { margin-top: 0; color: #2563EB; }
+        .contact-card a { color: #2563EB; font-weight: 600; }
+        footer {
+            background: #1F2937; color: #9CA3AF; padding: 32px 0; text-align: center; font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Attendance Tracker</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Support</h2>
+            <p>Find answers to common questions below, or contact us directly for help.</p>
+
+            <h3>Getting Started</h3>
+
+            <div class="faq">
+                <h4>How do I log in for the first time?</h4>
+                <p>The app comes with sample data including default staff PINs. Use PIN <strong>1234</strong> (Admin), <strong>2468</strong> (Teacher), or <strong>3691</strong> (Assistant) to log in. We recommend changing these immediately after your first login.</p>
+            </div>
+
+            <div class="faq">
+                <h4>How do I access management features?</h4>
+                <p>Student, Classroom, and Staff management require admin access. Tap any management tab in the sidebar, then enter the admin password when prompted. The default admin password is <strong>admin123</strong> -- change it immediately under Staff Management.</p>
+            </div>
+
+            <h3>Daily Use</h3>
+
+            <div class="faq">
+                <h4>How do I check in a student?</h4>
+                <p>Go to <strong>Check In/Out</strong>, tap the student's card, then choose <strong>Check In</strong> from the action menu. You can also mark students as Late, Excused, or Absent.</p>
+            </div>
+
+            <div class="faq">
+                <h4>How do I check out a student?</h4>
+                <p>Tap a checked-in student's card and choose <strong>Check Out</strong>. The checkout time is recorded in the attendance history.</p>
+            </div>
+
+            <div class="faq">
+                <h4>Can I filter by classroom?</h4>
+                <p>Yes. On the Check In/Out screen, use the <strong>All Classrooms</strong> dropdown at the top to filter students by their assigned classroom.</p>
+            </div>
+
+            <h3>Reports</h3>
+
+            <div class="faq">
+                <h4>How do I view attendance history?</h4>
+                <p>Go to <strong>Attendance History</strong> (admin access required). You can filter by student, date range (Today, Week, Month, or Custom), and see check-in/out times for each record.</p>
+            </div>
+
+            <div class="faq">
+                <h4>How are attendance percentages calculated?</h4>
+                <p>Present, Late, and Excused all count as "attended." Only Absent counts against the attendance percentage.</p>
+            </div>
+
+            <h3>Security</h3>
+
+            <div class="faq">
+                <h4>Is my data secure?</h4>
+                <p>Yes. All data stays on your iPad. Staff PINs and passwords are hashed with SHA-256 and stored in the iOS Keychain. The app auto-locks after inactivity.</p>
+            </div>
+
+            <div class="faq">
+                <h4>What happens if I uninstall the app?</h4>
+                <p>All data is permanently deleted when the app is uninstalled. Data is included in standard iPad backups.</p>
+            </div>
+
+            <h3>Troubleshooting</h3>
+
+            <div class="faq">
+                <h4>The app logged me out unexpectedly</h4>
+                <p>The app has an auto-logout feature that activates after a period of inactivity. This is a security feature for shared devices. Simply log in again with your PIN.</p>
+            </div>
+
+            <div class="faq">
+                <h4>I forgot my PIN</h4>
+                <p>Contact your administrator. They can reset your PIN from the Staff Management screen.</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Still Need Help?</h3>
+                <p>Contact us at <a href="mailto:support@attendancetracker.app">support@attendancetracker.app</a></p>
+                <p>We typically respond within 24 hours.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Attendance Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
