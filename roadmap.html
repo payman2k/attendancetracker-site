@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap - Attendance Tracker</title>
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-light: #DBEAFE;
+            --text: #1F2937;
+            --text-secondary: #6B7280;
+            --bg: #F9FAFB;
+            --white: #FFFFFF;
+            --green: #059669;
+            --orange: #D97706;
+            --purple: #7C3AED;
+            --rose: #E5553B;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        header {
+            background: var(--white);
+            border-bottom: 1px solid #E5E7EB;
+            padding: 16px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 { font-size: 1.25rem; color: var(--primary); }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+        }
+        nav a:hover { color: var(--primary); }
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+        }
+        .hero h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        main { padding: 48px 0 80px; }
+        .phase {
+            margin-bottom: 40px;
+        }
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .phase-badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--white);
+            white-space: nowrap;
+        }
+        .phase-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phase-goal {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .feature-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+        .feature-item {
+            background: var(--white);
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .feature-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .feature-item h4 {
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 48px 24px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 100%);
+            border-radius: 16px;
+            margin-top: 48px;
+        }
+        .cta-section h3 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta-button:hover { background: #1D4ED8; }
+        .divider {
+            border: none;
+            border-top: 2px dashed #E5E7EB;
+            margin: 40px 0;
+        }
+        footer {
+            background: var(--text);
+            color: #9CA3AF;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a { color: #D1D5DB; text-decoration: none; margin: 0 12px; }
+        footer a:hover { color: var(--white); }
+        footer .links { margin-bottom: 16px; }
+        @media (max-width: 600px) {
+            .hero h2 { font-size: 1.75rem; }
+            .phase-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .phase-title { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Attendance Tracker</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="roadmap.html">Roadmap</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Feature Roadmap</h2>
+            <p>We're building Attendance Tracker into a complete childcare management platform. Here's what's ahead &mdash; and we'd love your input on what to prioritize.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+
+            <!-- Phase 1 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-badge" style="background: var(--primary);">Phase 1</span>
+                    <span class="phase-title">Cloud Sync &amp; Export</span>
+                </div>
+                <p class="phase-goal">Goal: Break out of single-device limitation</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x2601;&#xFE0F;</span>
+                        <div>
+                            <h4>Cloud Backup &amp; Multi-Device Sync</h4>
+                            <p>Securely sync your data across multiple iPads so your whole team stays up to date in real time.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4E4;</span>
+                        <div>
+                            <h4>CSV &amp; PDF Report Export</h4>
+                            <p>Download attendance reports as CSV or PDF for record-keeping, audits, and sharing with administrators.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4CB;</span>
+                        <div>
+                            <h4>Enhanced Student Profiles</h4>
+                            <p>Add date of birth, allergies, emergency contacts, parent info, and photos to each student's record.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4DD;</span>
+                        <div>
+                            <h4>Check-In / Check-Out Notes</h4>
+                            <p>Staff can add notes when checking students in or out &mdash; record pickup authorizations, health notes, and more.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Phase 2 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-badge" style="background: var(--green);">Phase 2</span>
+                    <span class="phase-title">Family Connection</span>
+                </div>
+                <p class="phase-goal">Goal: Bridge the gap between center and home</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4F0;</span>
+                        <div>
+                            <h4>Daily Activity Reports</h4>
+                            <p>Log meals, naps, activities, and mood throughout the day. Parents see a full summary of their child's day.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4F8;</span>
+                        <div>
+                            <h4>Photo Capture &amp; Sharing</h4>
+                            <p>Teachers snap photos during the day and share them securely with families.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;</span>
+                        <div>
+                            <h4>Parent Portal</h4>
+                            <p>A dedicated web portal where parents can view daily reports, attendance history, and their child's profile.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4AC;</span>
+                        <div>
+                            <h4>In-App Messaging</h4>
+                            <p>Direct and group messaging between staff and parents &mdash; announcements, updates, and private conversations.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Phase 3 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-badge" style="background: var(--orange);">Phase 3</span>
+                    <span class="phase-title">Compliance &amp; Operations</span>
+                </div>
+                <p class="phase-goal">Goal: Handle the operational complexity of running a center</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F6A8;</span>
+                        <div>
+                            <h4>Staff-to-Child Ratio Monitoring</h4>
+                            <p>Set ratio requirements per room and get real-time alerts when ratios are out of compliance.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1FA7A;</span>
+                        <div>
+                            <h4>Health Checks</h4>
+                            <p>Log temperatures and illness symptoms at check-in. Flag concerns and maintain health records.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F634;</span>
+                        <div>
+                            <h4>Sleep &amp; Nap Tracking</h4>
+                            <p>Log nap start/end times for infants and toddlers to meet licensing requirements.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4CB;</span>
+                        <div>
+                            <h4>Behavior Incident Tracking</h4>
+                            <p>Document incidents, categorize by type, and notify parents with secure, private reports.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4C5;</span>
+                        <div>
+                            <h4>Daily Schedules</h4>
+                            <p>Build structured daily routines per classroom &mdash; activities, meals, rest, and transitions.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Phase 4 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-badge" style="background: var(--purple);">Phase 4</span>
+                    <span class="phase-title">Enrollment &amp; Billing</span>
+                </div>
+                <p class="phase-goal">Goal: Handle the business side of childcare</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4DD;</span>
+                        <div>
+                            <h4>Digital Enrollment Forms &amp; E-Signatures</h4>
+                            <p>Accept applications online, collect documents, and gather legally-binding e-signatures &mdash; no paper needed.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4CB;</span>
+                        <div>
+                            <h4>Waitlist Management</h4>
+                            <p>Track prospective families, manage inquiries, and automatically admit students when spots open.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4B3;</span>
+                        <div>
+                            <h4>Tuition Billing &amp; Invoicing</h4>
+                            <p>Generate invoices, set up billing plans, and send receipts &mdash; all from one place.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4B0;</span>
+                        <div>
+                            <h4>Online Payment Processing</h4>
+                            <p>Accept online payments and autopay so you get paid on time without chasing families.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4CA;</span>
+                        <div>
+                            <h4>Expense Tracking</h4>
+                            <p>Track center-level expenses to understand your true operating costs and manage budgets.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Phase 5 -->
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-badge" style="background: var(--rose);">Phase 5</span>
+                    <span class="phase-title">Advanced Features</span>
+                </div>
+                <p class="phase-goal">Goal: Enterprise-ready childcare management</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4DA;</span>
+                        <div>
+                            <h4>Lesson Planning &amp; Curriculum</h4>
+                            <p>Create and share lesson plans with templates, activities, supplies lists, and state standards alignment.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F5D3;&#xFE0F;</span>
+                        <div>
+                            <h4>Staff Shift Scheduling</h4>
+                            <p>Schedule shifts, manage coverage, and ensure you always have the right staff-to-child ratios.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F3E2;</span>
+                        <div>
+                            <h4>Multi-Location Management</h4>
+                            <p>Manage multiple centers from one account with cross-location visibility and reporting.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4D2;</span>
+                        <div>
+                            <h4>QuickBooks Integration</h4>
+                            <p>Export billing data directly to QuickBooks Online for seamless accounting and tax prep.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F4F1;</span>
+                        <div>
+                            <h4>Contactless QR Code Check-In</h4>
+                            <p>Families scan a QR code at drop-off and pick-up for fast, touchless attendance tracking.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">&#x1F34E;</span>
+                        <div>
+                            <h4>CACFP Food Program Tracking</h4>
+                            <p>Track meal counts and generate CACFP reports for food program compliance and reimbursement.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <h3>Help Us Prioritize</h3>
+                <p>Which features would make the biggest difference for your program? Your feedback directly shapes what we build next.</p>
+                <a href="mailto:payman00@gmail.com?subject=Attendance%20Tracker%20Feature%20Request" class="cta-button">Send a Feature Request</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="roadmap.html">Roadmap</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+                <a href="mailto:payman00@gmail.com">Contact</a>
+            </div>
+            <p>&copy; 2026 Attendance Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
